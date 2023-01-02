@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blood_donation.controller.DashboardController">
+    <children>
+        <VBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0">
+            <children>
+                <ToolBar prefHeight="58.0" prefWidth="1024.0" style="-fx-background-color: #73050c;">
+                    <items>
+                        <HBox prefHeight="58.0" prefWidth="1012.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="1013.0">
+                                    <children>
+                                        <Label fx:id="currentScreen" text="Home" textFill="WHITE">
+                                            <HBox.margin>
+                                                <Insets left="16.0" />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font name="Segoe UI Semibold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="1013.0">
+                                    <children>
+                                        <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#logout" styleClass="secondary-button" text="Logout">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                            <HBox.margin>
+                                                <Insets right="16.0" />
+                                            </HBox.margin>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </items>
+                </ToolBar>
+                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="1024.0">
+                    <children>
+                        <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="653.0" prefWidth="189.0">
+                            <children>
+                                <Button fx:id="homeButton" mnemonicParsing="false" onAction="#showHomeView" prefHeight="62.0" prefWidth="233.0" styleClass="sidebar-button" text="Home">
+                                    <VBox.margin>
+                                        <Insets left="16.0" right="16.0" top="32.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <Button fx:id="showBloodRequestFormButton" mnemonicParsing="false" onAction="#showBloodRequestFormView" prefHeight="62.0" prefWidth="233.0" text="Create Blood Request">
+                                    <VBox.margin>
+                                        <Insets left="16.0" right="16.0" top="16.0" />
+                                    </VBox.margin>
+                                    <styleClass>
+                                        <String fx:value="sidebar-button" />
+                                        <String fx:value="sidebar-button-inactive" />
+                                    </styleClass>
+                                </Button>
+                                <Button fx:id="showBloodRequestButton" mnemonicParsing="false" onAction="#showBloodRequestView" prefHeight="62.0" prefWidth="233.0" text="Blood Requests">
+                                    <VBox.margin>
+                                        <Insets left="16.0" right="16.0" top="16.0" />
+                                    </VBox.margin>
+                                    <styleClass>
+                                        <String fx:value="sidebar-button" />
+                                        <String fx:value="sidebar-button-inactive" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                        </VBox>
+                        <StackPane maxHeight="-Infinity" prefHeight="653.0" prefWidth="836.0">
+                            <children>
+                                <Pane fx:id="bloodRequestFormPane" maxHeight="-Infinity" prefHeight="653.0" prefWidth="836.0" style="-fx-background-color: white;">
+                                    <fx:include source="blood-request-form-view.fxml" />
+                                </Pane>
+                                <Pane fx:id="bloodRequestsPane" style="-fx-background-color: white;">
+                                    <fx:include fx:id="bloodRequest" source="blood-requests-view.fxml" />
+                                </Pane>
+                                <Pane fx:id="homePane" prefHeight="653.0" prefWidth="836.0" style="-fx-background-color: white;">
+                                    <fx:include fx:id="home" source="home-view.fxml" />
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

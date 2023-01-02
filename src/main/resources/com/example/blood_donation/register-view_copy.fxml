@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1024.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blood_donation.controller.AuthenticationController">
+    <children>
+        <HBox layoutY="-5.0" style="-fx-background-color: white;">
+            <children>
+                <AnchorPane prefHeight="620.0" prefWidth="433.0">
+                    <children>
+                        <VBox alignment="CENTER" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="523.0">
+                            <children>
+                                <ImageView fitHeight="737.0" fitWidth="463.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/donate_blood_artwork.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                        <VBox>
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#goToLogin" prefHeight="36.0" prefWidth="39.0" style="-fx-padding: 0;">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="42.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" styleClass="back-arrow">
+                                            <image>
+                                                <Image url="@images/back_arrow.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <styleClass>
+                                        <String fx:value="back-arrow" />
+                                        <String fx:value="drop-shadow" />
+                                    </styleClass>
+                                </Button>
+                            </children>
+                            <padding>
+                                <Insets left="16.0" top="32.0" />
+                            </padding>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+                <VBox alignment="CENTER" prefHeight="620.0" prefWidth="503.0" style="-fx-background-color: white;">
+                    <children>
+                        <HBox>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="32.0" right="32.0" top="32.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label styleClass="primary-text-color" text="Sign Up">
+                                    <font>
+                                        <Font name="Roboto" size="34.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <VBox alignment="CENTER_LEFT" prefHeight="330.0" prefWidth="503.0">
+                            <HBox>
+                                <VBox>
+                                    <Label styleClass="form-label" text="Name">
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="16.0" />
+                                        </VBox.margin>
+                                        <font>
+                                            <Font name="Roboto" size="14.0" />
+                                        </font>
+                                    </Label>
+                                    <TextField fx:id="nameTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0" promptText="xyz...">
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="8.0" />
+                                        </VBox.margin>
+                                    </TextField>
+                                </VBox>
+
+                                <VBox>
+                                    <Label layoutX="42.0" layoutY="42.0" styleClass="form-label" text="Phone">
+                                        <font>
+                                            <Font name="Roboto" size="14.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="16.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="phoneTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0" promptText="+8801xxxxxxxx">
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="8.0" />
+                                        </VBox.margin>
+                                    </TextField>
+                                </VBox>
+                            </HBox>
+
+                            <HBox>
+                                <VBox>
+                                    <Label layoutX="42.0" layoutY="42.0" styleClass="form-label" text="Password">
+                                        <font>
+                                            <Font name="Roboto" size="14.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="16.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <PasswordField fx:id="passwordField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0" promptText="****">
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="8.0" />
+                                        </VBox.margin>
+                                    </PasswordField>
+                                </VBox>
+
+                                <VBox>
+                                    <Label layoutX="42.0" layoutY="42.0" styleClass="form-label" text="Date of Birth">
+                                        <font>
+                                            <Font name="Roboto" size="14.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="16.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="birthDatePicker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0" promptText="mm/dd/yyyy">
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="8.0" />
+                                        </VBox.margin>
+                                    </DatePicker>
+                                </VBox>
+                            </HBox>
+
+                            <HBox>
+                                <VBox>
+                                    <Label layoutX="42.0" layoutY="42.0" styleClass="form-label" text="Gender">
+                                        <font>
+                                            <Font name="Roboto" size="14.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="16.0" />
+                                        </VBox.margin>
+                                    </Label>
+
+                                    <ComboBox fx:id="genderComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0">
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="8.0" />
+                                        </VBox.margin>
+                                        <items>
+                                            <FXCollections fx:factory="observableArrayList">
+                                                <String fx:value="Male" />
+                                                <String fx:value="Female" />
+                                            </FXCollections>
+                                        </items>
+                                        <value>
+                                            <String fx:value="Male" />
+                                        </value>
+                                    </ComboBox>
+                                </VBox>
+
+                                <VBox>
+                                    <Label layoutX="42.0" layoutY="42.0" styleClass="form-label" text="Address">
+                                        <font>
+                                            <Font name="Roboto" size="14.0" />
+                                        </font>
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="16.0" />
+                                        </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="addressTextField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0" promptText="...">
+                                        <VBox.margin>
+                                            <Insets left="32.0" top="8.0" />
+                                        </VBox.margin>
+                                    </TextField>
+                                </VBox>
+                            </HBox>
+
+
+                           <HBox>
+                               <VBox>
+                                   <Label layoutX="42.0" layoutY="126.0" styleClass="form-label" text="Blood Group">
+                                       <font>
+                                           <Font name="Roboto" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                           <Insets left="32.0" top="16.0" />
+                                       </VBox.margin>
+                                   </Label>
+                                   <ComboBox fx:id="bloodGroupComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="200.0">
+                                       <VBox.margin>
+                                           <Insets left="32.0" top="8.0" />
+                                       </VBox.margin>
+                                       <items>
+                                           <FXCollections fx:factory="observableArrayList">
+                                               <String fx:value="A+" />
+                                               <String fx:value="A-" />
+                                               <String fx:value="B+" />
+                                               <String fx:value="B-" />
+                                               <String fx:value="O+" />
+                                               <String fx:value="O-" />
+                                               <String fx:value="AB+" />
+                                               <String fx:value="AB-" />
+                                           </FXCollections>
+                                       </items>
+                                       <value>
+                                           <String fx:value="O+" />
+                                       </value>
+                                   </ComboBox>
+                               </VBox>
+
+                              <VBox>
+                                  <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#signUp" prefHeight="35.0" prefWidth="200.0" text="Become a Donor" textFill="WHITE">
+                                      <VBox.margin>
+                                          <Insets left="32.0" top="32" />
+                                      </VBox.margin>
+                                      <font>
+                                          <Font name="Dubai Bold" size="16.0" />
+                                      </font>
+                                  </Button>
+                              </VBox>
+                           </HBox>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

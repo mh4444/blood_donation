@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" style="-fx-background-color: white;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blood_donation.controller.AuthenticationController">
+
+    <!--   <children>-->
+    <!--      <VBox alignment="CENTER" layoutX="325.0" layoutY="128.0" style="-fx-background-radius: 12; -fx-border-color: #73050c; -fx-border-width: 3; -fx-border-radius: 6;">-->
+    <!--         <children>-->
+    <!--            <ImageView fitHeight="146.0" fitWidth="310.0" pickOnBounds="true" preserveRatio="true">-->
+    <!--               <image>-->
+    <!--                  <Image url="@images/versity_logo.png" />-->
+    <!--               </image>-->
+    <!--            </ImageView>-->
+    <!--            <TextField fx:id="loginPhone" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" promptText="Phone">-->
+    <!--               <VBox.margin>-->
+    <!--                  <Insets top="32.0" />-->
+    <!--               </VBox.margin>-->
+    <!--            </TextField>-->
+    <!--            <PasswordField fx:id="loginPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="250.0" promptText="Password">-->
+    <!--               <VBox.margin>-->
+    <!--                  <Insets top="8.0" />-->
+    <!--               </VBox.margin>-->
+    <!--            </PasswordField>-->
+    <!--            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="250.0" text="Login">-->
+    <!--               <VBox.margin>-->
+    <!--                  <Insets bottom="16.0" top="16.0" />-->
+    <!--               </VBox.margin>-->
+    <!--            </Button>-->
+    <!--            <Button fx:id="registerButton" mnemonicParsing="false" onAction="#goToRegister" prefHeight="35.0" prefWidth="250.0" text="Register" />-->
+    <!--         </children>-->
+    <!--         <padding>-->
+    <!--            <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />-->
+    <!--         </padding>-->
+    <!--      </VBox>-->
+    <!--   </children>-->
+
+    <children>
+        <HBox layoutY="-5.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #73050c;">
+            <children>
+                <AnchorPane prefHeight="728.0" prefWidth="636.0">
+                    <children>
+                        <VBox alignment="CENTER" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="627.0" style="-fx-background-color: white;">
+                            <children>
+                                <ImageView fitHeight="335.0" fitWidth="520.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/blood_login_artwork.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                
+                    </children>
+                </AnchorPane>
+                <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="405.0" style="-fx-background-color: white;">
+                    <children>
+                        <HBox>
+                            <VBox.margin>
+                                <Insets bottom="16.0" left="32.0" right="32.0" />
+                            </VBox.margin>
+                            <children>
+                                <Label styleClass="primary-text-color" text="Login">
+                                    <font>
+                                        <Font name="Roboto" size="34.0" />
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <VBox prefWidth="405.0">
+                           <VBox>
+                               <Label styleClass="form-label" text="Phone">
+                                   <VBox.margin>
+                                       <Insets left="32.0" top="16.0" />
+                                   </VBox.margin>
+                                   <font>
+                                       <Font name="Roboto" size="14.0" />
+                                   </font>
+                               </Label>
+                               <TextField fx:id="loginPhone" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="300.0" promptText="+8801xxxxxxxx">
+                                   <VBox.margin>
+                                       <Insets left="32.0" top="8.0" />
+                                   </VBox.margin>
+                               </TextField>
+                           </VBox>
+
+                            <VBox>
+                                <Label layoutX="42.0" layoutY="42.0" styleClass="form-label" text="Password">
+                                    <font>
+                                        <Font name="Roboto" size="14.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets left="32.0" top="16.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <PasswordField fx:id="loginPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="300.0" promptText="******">
+                                    <VBox.margin>
+                                        <Insets left="32.0" top="8.0" />
+                                    </VBox.margin>
+                                </PasswordField>
+                            </VBox>
+
+                            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#login" prefHeight="35.0" prefWidth="300.0" text="Login" textFill="WHITE">
+                                <VBox.margin>
+                                    <Insets left="32.0" top="32" />
+                                </VBox.margin>
+                                <font>
+                                    <Font name="Dubai Bold" size="16.0" />
+                                </font>
+                            </Button>
+
+                            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#goToRegister" prefHeight="35.0" prefWidth="300.0" text="Become a Donor" textFill="WHITE">
+                                <VBox.margin>
+                                    <Insets left="32.0" top="16.0" />
+                                </VBox.margin>
+                                <font>
+                                    <Font name="Dubai Bold" size="16.0" />
+                                </font>
+                            </Button>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+
+
+</AnchorPane>

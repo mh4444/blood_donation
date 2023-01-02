@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="619.0" prefWidth="835.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blood_donation.controller.BloodRequestController">
+    <children>
+        <HBox>
+            <VBox.margin>
+                <Insets bottom="16.0" left="32.0" right="32.0" top="32.0" />
+            </VBox.margin>
+            <children>
+                <Label styleClass="primary-text-color" text="Create Blood Request">
+                    <font>
+                        <Font name="Roboto" size="34.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+        <VBox prefHeight="562.0" prefWidth="398.0">
+
+            <Label layoutX="42.0" layoutY="126.0" styleClass="form-label" text="Blood Group">
+                <font>
+                    <Font name="Roboto" size="14.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="32.0" top="16.0" />
+                </VBox.margin>
+            </Label>
+            <ComboBox fx:id="bloodGroupComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="300.0">
+                <VBox.margin>
+                    <Insets left="32.0" top="8.0" />
+                </VBox.margin>
+            </ComboBox>
+
+            <Label layoutX="42.0" layoutY="126.0" styleClass="form-label" text="Note">
+                <font>
+                    <Font name="Roboto" size="14.0" />
+                </font>
+                <VBox.margin>
+                    <Insets left="32.0" top="16.0" />
+                </VBox.margin>
+            </Label>
+            <TextArea fx:id="noteTextArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0" promptText="Add instructions, addresses or additional contact info">
+                <VBox.margin>
+                    <Insets left="32.0" top="8.0" />
+                </VBox.margin>
+            </TextArea>
+            
+
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#createBloodRequest" prefHeight="35.0" prefWidth="300.0" text="Create" textFill="WHITE">
+                <VBox.margin>
+                    <Insets left="32.0" top="32" />
+                </VBox.margin>
+                <font>
+                    <Font name="Dubai Bold" size="16.0" />
+                </font>
+            </Button>
+        </VBox>
+    </children>
+</VBox>

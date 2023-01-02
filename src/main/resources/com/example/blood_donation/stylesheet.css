@@ -1,0 +1,276 @@
+* {
+    -fx-primary-color: #73050c;
+    -fx-secondary-color: #a83c33;
+    -fx-secondary-light-color: #b45a52;
+}
+
+
+.root {
+    -fx-background-color: white;
+
+}
+
+.primary-bg {
+    -fx-background-color: -fx-primary-color;
+}
+
+.secondary-bg {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.button,
+.sidebar-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: "white";
+    -fx-font-weight: 700;
+    -fx-background-radius: 8;
+    -fx-font-size: medium;
+}
+
+.button:hover {
+    -fx-background-color: -fx-secondary-color;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: -fx-primary-color;
+}
+
+.drop-shadow {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.507), 5, 0.1, 0, 0);
+}
+
+.back-arrow {
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-color: -fx-secondary-color;
+    -fx-font-weight: 900;
+    -fx-font-size: 20;
+}
+
+.back-arrow:hover {
+    -fx-background-color: -fx-secondary-light-color;
+}
+
+.secondary-button,
+.sidebar-button-inactive {
+    -fx-background-color: -fx-secondary-color;
+    -fx-text-fill: "white";
+    -fx-font-weight: 700;
+    -fx-background-radius: 8;
+    -fx-font-size: medium;
+}
+
+
+.secondary-button:hover {
+    -fx-background-color: -fx-secondary-light-color;
+}
+
+.sidebar-button-inactive:hover {
+    -fx-background-color: -fx-primary-color;
+    -fx-cursor: hand;
+}
+
+.text-field,
+.text-area,
+.date-picker {
+    -fx-text-fill: -fx-primary-color;
+    -fx-text-box-border: -fx-primary-color;
+    -fx-focus-color: -fx-primary-color;
+    -fx-faint-focus-color: transparent;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-background-radius: 0;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.date-picker .cell {
+    -fx-background-color: white;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: -fx-primary-color;
+}
+
+.date-picker .cell:focused {
+    -fx-background-color: -fx-primary-color;
+}
+
+.date-picker .selected {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.date-picker .selected:focused {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+
+.date-picker-popup {
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: -fx-primary-color;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: -fx-secondary-color;
+}
+
+
+
+
+.toolbar {
+    -fx-background: -fx-primary-color;
+}
+
+.form-label {
+    -fx-text-fill: -fx-primary-color;
+    -fx-font-weight: 700;
+}
+
+.header-text {
+    -fx-font-size: xx-large;
+    -fx-text-fill: -fx-primary-color;
+    -fx-font-weight: 500;
+}
+
+
+.primary-text-color {
+    -fx-text-fill: -fx-secondary-color;
+}
+
+.blood-group-button {
+    -fx-font-size: x-large;
+}
+
+.combo-box {
+    -fx-text-fill: -fx-primary-color;
+    -fx-border-color: -fx-primary-color;
+    -fx-background-color: white;
+    -fx-border-width: 1;
+    -fx-focus-color: -fx-primary-color;
+    -fx-faint-focus-color: transparent;
+}
+
+.combo-box .combo-box-popup .list-cell,
+.list-cell {
+    -fx-background: white;
+    -fx-text-fill: -fx-primary-color;
+}
+
+.combo-box .combo-box-popup .list-cell:hover {
+    -fx-background: -fx-secondary-color;
+    -fx-background-color: -fx-secondary-color;
+    -fx-text-fill: white;
+}
+
+.combo-box .combo-box-popup .list-cell:selected {
+    -fx-background: -fx-primary-color;
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+
+/* .combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background: #73050c;
+    -fx-background-color: #73050c;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected 
+{
+    -fx-background: #73050c;
+    -fx-background-color: #73050c;
+    -fx-text-fill: white;
+} */
+
+.table-view {
+    -fx-border-color: -fx-primary-color;
+    -fx-border-width: 3;
+    -fx-faint-focus-color: -fx-primary-color;
+    -fx-focus-color: transparent;
+    -fx-selection-bar: -fx-secondary-color;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* .table-view {
+    
+} */
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: -fx-primary-color;
+    -fx-stroke: transparent;
+    -fx-size: 50;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+
+}
+
+.table-row-cell:filled:hover {
+    -fx-size: 50;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+}
+
+.table-view:row-selection {
+    -fx-text-fill: white;
+    -fx-fixed-cell-size: 50;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+}
+
+.blood-request-list-cell {
+    -fx-background-color: white;
+}
+
+.list-view{
+    -fx-background-color: transparent;
+    -fx-faint-focus-color: -fx-primary-color;
+    -fx-focus-color: transparent;
+}
+
+.list-view:focused .list-cell:focused {
+    -fx-background-color: transparent;
+    -fx-faint-focus-color: -fx-primary-color;
+    -fx-focus-color: transparent;
+}
+
+.blood-request-list-cell-header-text{
+    -fx-text-fill: -fx-primary-color;
+    -fx-font-weight: bold;
+    -fx-font-size: x-large;
+}
+
+.blood-request-list-cell-caption-text{
+    -fx-text-fill: -fx-secondary-color;
+    -fx-font-size: medium;
+}
+
+.table-view .table-column {
+    -fx-text-alignment: center;
+    -fx-alignment: CENTER;
+
+}
