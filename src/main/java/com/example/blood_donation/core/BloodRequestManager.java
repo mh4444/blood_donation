@@ -22,7 +22,7 @@ public class BloodRequestManager {
     }
 
     public List<BloodRequest> getBloodRequestByUser(User user) {
-        return getAllBloodRequest().stream().filter((bloodRequest -> bloodRequest.getRequestedBy().equals(user.getPhone()))).collect(Collectors.toList());
+        return getAllBloodRequest().stream().filter((bloodRequest -> bloodRequest.getRequestedBy().getPhone().equals(user.getPhone()))).collect(Collectors.toList());
     }
 
     public boolean saveBloodRequest(ArrayList<BloodRequest> bloodRequests) {

@@ -4,40 +4,48 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxWidth="-Infinity" prefWidth="818.0" styleClass="blood-request-list-cell" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <children>
-            <VBox alignment="CENTER_LEFT" prefHeight="132.0" prefWidth="686.0">
-                <Label fx:id="requestedBy" styleClass="blood-request-list-cell-header-text" text="Requested By: Test">
-                    <VBox.margin>
-                        <Insets top="8.0" />
-                    </VBox.margin>
-                </Label>
-                <Label fx:id="phone" layoutX="10.0" layoutY="27.0" styleClass="blood-request-list-cell-caption-text" text="Phone: 01711156385">
-                    <VBox.margin>
-                        <Insets top="8.0" />
-                    </VBox.margin>
-                </Label>
-                <Label fx:id="createdAt" styleClass="blood-request-list-cell-caption-text" text="Request Created At: ">
-                    <VBox.margin>
-                        <Insets top="8.0" />
-                    </VBox.margin>
-                </Label>
-                <Label fx:id="note" styleClass="blood-request-list-cell-caption-text" text="Note: Urgent!">
-                    <VBox.margin>
-                        <Insets top="8.0" />
-                    </VBox.margin>
-                </Label>
-                <padding>
-                    <Insets left="16.0" right="16.0" />
-                </padding>
-            </VBox>
-            <AnchorPane layoutX="719.0" prefHeight="100.0" prefWidth="116.0" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
-                <children>
-                    <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="51.0" text="O+" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                    <Button fx:id="helpButton" layoutY="44.0" prefHeight="30.0" prefWidth="116.0" text="Help" AnchorPane.bottomAnchor="0.0" />
-                </children>
-            </AnchorPane>
-        </children>
-    </AnchorPane>
-</VBox>
+<AnchorPane prefWidth="4.0" styleClass="blood-request-list-cell" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="16.0">
+            <Label fx:id="requestedBy" styleClass="blood-request-list-cell-header-text" text="Requested By: Test">
+                <VBox.margin>
+                    <Insets top="8.0" />
+                </VBox.margin>
+            </Label>
+            <Label fx:id="phone" layoutX="10.0" layoutY="27.0" styleClass="blood-request-list-cell-caption-text" text="Phone: 01711156385">
+                <VBox.margin>
+                    <Insets top="8.0" />
+                </VBox.margin>
+            </Label>
+            <Label fx:id="createdAt" minWidth="0.0" styleClass="blood-request-list-cell-caption-text" text="Request Created At: ">
+                <VBox.margin>
+                    <Insets top="8.0" />
+                </VBox.margin>
+            </Label>
+            <TextArea fx:id="note" editable="false" maxHeight="80.0" prefWidth="300.0" styleClass="blood-request-list-cell-caption-text" text="Note:" wrapText="true">
+                <VBox.margin>
+                    <Insets top="8.0" />
+                </VBox.margin>
+            </TextArea>
+            <Label fx:id="respondedBy" minWidth="0.0" styleClass="blood-request-list-cell-caption-text" text="Responded By:">
+                <VBox.margin>
+                    <Insets top="8.0" />
+                </VBox.margin>
+            </Label>
+            <Label fx:id="respondedByPhone" minWidth="0.0" styleClass="blood-request-list-cell-caption-text" text="Phone:">
+                <VBox.margin>
+                    <Insets top="8.0" />
+                </VBox.margin>
+            </Label>
+            <padding>
+                <Insets left="16.0" right="16.0" />
+            </padding>
+        </VBox>
+        <AnchorPane layoutX="719.0" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="16.0">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="51.0" text="O+" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <Button fx:id="helpButton" layoutY="44.0"  prefHeight="30.0" prefWidth="116.0" text="Help" AnchorPane.bottomAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

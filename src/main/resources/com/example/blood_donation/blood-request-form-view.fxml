@@ -22,45 +22,66 @@
                 </Label>
             </children>
         </HBox>
-        <VBox prefHeight="562.0" prefWidth="398.0">
+        <AnchorPane prefHeight="562.0" prefWidth="398.0">
+            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
 
-            <Label layoutX="42.0" layoutY="126.0" styleClass="form-label" text="Blood Group">
-                <font>
-                    <Font name="Roboto" size="14.0" />
-                </font>
-                <VBox.margin>
-                    <Insets left="32.0" top="16.0" />
-                </VBox.margin>
-            </Label>
-            <ComboBox fx:id="bloodGroupComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="300.0">
-                <VBox.margin>
-                    <Insets left="32.0" top="8.0" />
-                </VBox.margin>
-            </ComboBox>
+                <Label layoutX="42.0" layoutY="126.0" styleClass="form-label" text="Blood Group">
+                    <font>
+                        <Font name="Roboto" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="32.0" top="16.0" />
+                    </VBox.margin>
+                </Label>
+                <ComboBox fx:id="bloodGroupComboBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="300.0">
+                    <VBox.margin>
+                        <Insets left="32.0" top="8.0" />
+                    </VBox.margin>
+                </ComboBox>
 
-            <Label layoutX="42.0" layoutY="126.0" styleClass="form-label" text="Note">
-                <font>
-                    <Font name="Roboto" size="14.0" />
-                </font>
-                <VBox.margin>
-                    <Insets left="32.0" top="16.0" />
-                </VBox.margin>
-            </Label>
-            <TextArea fx:id="noteTextArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0" promptText="Add instructions, addresses or additional contact info">
-                <VBox.margin>
-                    <Insets left="32.0" top="8.0" />
-                </VBox.margin>
-            </TextArea>
-            
+                <Label layoutX="42.0" layoutY="126.0" styleClass="form-label" text="Note">
+                    <font>
+                        <Font name="Roboto" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="32.0" top="16.0" />
+                    </VBox.margin>
+                </Label>
+                <TextArea fx:id="noteTextArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="300.0" promptText="Add instructions, addresses or additional contact info" wrapText="true">
+                    <VBox.margin>
+                        <Insets left="32.0" top="8.0" />
+                    </VBox.margin>
+                </TextArea>
 
-            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#createBloodRequest" prefHeight="35.0" prefWidth="300.0" text="Create" textFill="WHITE">
-                <VBox.margin>
-                    <Insets left="32.0" top="32" />
-                </VBox.margin>
-                <font>
-                    <Font name="Dubai Bold" size="16.0" />
-                </font>
-            </Button>
-        </VBox>
+
+                <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#createBloodRequest" prefHeight="35.0" prefWidth="300.0" text="Create" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets left="32.0" top="32" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Dubai Bold" size="16.0" />
+                    </font>
+                </Button>
+            </VBox>
+            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox alignment="CENTER_LEFT" prefWidth="483.0">
+               <VBox.margin>
+                  <Insets left="20.0" top="16.0" />
+               </VBox.margin>
+               <children>
+                  <Label style="-fx-font-size: larger;" styleClass="header-text" text="Request Created by You" />
+                      <Button onAction="#loadUserBloodRequests" prefHeight="41.0" prefWidth="73.0" text="Refresh">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+                <ListView fx:id="userBloodRequestListView" prefHeight="529.0" prefWidth="503.0">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin></ListView>
+            </VBox>
+        </AnchorPane>
     </children>
 </VBox>

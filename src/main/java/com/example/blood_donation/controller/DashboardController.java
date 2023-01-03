@@ -93,6 +93,7 @@ public class DashboardController implements Initializable {
         homeButton.getStyleClass().add("sidebar-button-inactive");
         showBloodRequestButton.getStyleClass().add("sidebar-button-inactive");
 
+        bloodRequestController.loadUserBloodRequests();
         bloodRequestFormPane.toFront();
 
 

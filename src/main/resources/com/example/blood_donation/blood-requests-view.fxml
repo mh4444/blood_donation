@@ -5,14 +5,17 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane prefHeight="619.0" prefWidth="835.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.blood_donation.controller.BloodRequestController">
-    <ListView fx:id="bloodRequestsListView" prefHeight="625.0" prefWidth="835.0" />
     <VBox fx:id="nothingFound" prefHeight="59.0" prefWidth="835.0">
         <Label alignment="TOP_CENTER" prefHeight="74.0" prefWidth="836.0" styleClass="header-text" text="No records found!">
-         <padding>
-            <Insets top="16.0" />
-         </padding>
          <VBox.margin>
-            <Insets top="16.0" />
+            <Insets top="32.0" />
          </VBox.margin></Label>
+    </VBox>
+    <VBox>
+        <Button mnemonicParsing="false" onAction="#loadBloodRequests" prefHeight="34.0" prefWidth="82.0" text="Refresh">
+         <VBox.margin>
+            <Insets left="20.0" top="32.0" />
+         </VBox.margin></Button>
+        <ListView fx:id="bloodRequestsListView" prefHeight="625.0" prefWidth="835.0" />
     </VBox>
 </AnchorPane>

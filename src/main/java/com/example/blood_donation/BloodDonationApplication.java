@@ -22,7 +22,7 @@ public class BloodDonationApplication extends Application {
             screen = Screens.DASHBOARD;
         }
 
-        userManager.seedUsers();
+//        userManager.seedUsers();
 
         Scene scene = navigationManager.getScene(screen);
 
