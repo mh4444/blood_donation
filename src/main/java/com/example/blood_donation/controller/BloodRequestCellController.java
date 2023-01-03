@@ -36,6 +36,9 @@ public class BloodRequestCellController {
     @FXML
     Button helpButton;
 
+    @FXML
+    Button bloodGroupType;
+
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM uuuu, hh:mm a");
 
     private UserManager userManager = new UserManager();
@@ -86,6 +89,7 @@ public class BloodRequestCellController {
         phone.setText("Phone: " + bloodRequest.getRequestedBy().getPhone());
         createdAt.setText("Request Created At: " + formatter.format(bloodRequest.getCreatedAt()));
         note.setText("Note: " + bloodRequest.getNote());
+        bloodGroupType.setText(bloodRequest.getBloodGroup().getString());
 
 
         if (bloodRequest.getRespondedBy() != null) {
