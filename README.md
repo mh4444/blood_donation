@@ -1,5 +1,7 @@
 # JavaFx Blood Donation System
 
+All data are stored in local filesystem
+
 ## Login
 
 ![image](https://user-images.githubusercontent.com/44702960/227719227-6ab907ee-4c46-46a7-b85d-27f0893aaf6b.png)
